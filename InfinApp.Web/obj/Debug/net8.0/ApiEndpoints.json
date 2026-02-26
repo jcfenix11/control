@@ -1,0 +1,117 @@
+[
+  {
+    "ContainingType": "InfinApp.Web.Controllers.ControlActividadApiController",
+    "Method": "Crear",
+    "RelativePath": "api/ControlActividadApi",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "InfinApp.Web.Models.ControlActividad",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "InfinApp.Web.Controllers.ControlActividadApiController",
+    "Method": "GetById",
+    "RelativePath": "api/ControlActividadApi/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "InfinApp.Web.DTOs.ControlActividadDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "InfinApp.Web.Controllers.ControlActividadApiController",
+    "Method": "Actualizar",
+    "RelativePath": "api/ControlActividadApi/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "InfinApp.Web.Models.ControlActividad",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "InfinApp.Web.Controllers.ControlActividadApiController",
+    "Method": "Eliminar",
+    "RelativePath": "api/ControlActividadApi/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "InfinApp.Web.Controllers.ControlActividadApiController",
+    "Method": "PorColaborador",
+    "RelativePath": "api/ControlActividadApi/porColaborador/{colaboradorId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "colaboradorId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[InfinApp.Web.DTOs.ControlActividadDto, InfinApp.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

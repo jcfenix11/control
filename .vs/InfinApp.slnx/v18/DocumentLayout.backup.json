@@ -1,0 +1,136 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\inver\\source\\repos\\InfinApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1C334C01-4592-AA35-7FA4-9726245DA304}|InfinApp.Web\\InfinApp.Web.csproj|c:\\users\\inver\\source\\repos\\infinapp\\infinapp.web\\wwwroot\\js\\controlactividad.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1C334C01-4592-AA35-7FA4-9726245DA304}|InfinApp.Web\\InfinApp.Web.csproj|solutionrelative:infinapp.web\\wwwroot\\js\\controlactividad.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C334C01-4592-AA35-7FA4-9726245DA304}|InfinApp.Web\\InfinApp.Web.csproj|c:\\users\\inver\\source\\repos\\infinapp\\infinapp.web\\repositories\\controlactividadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C334C01-4592-AA35-7FA4-9726245DA304}|InfinApp.Web\\InfinApp.Web.csproj|solutionrelative:infinapp.web\\repositories\\controlactividadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C334C01-4592-AA35-7FA4-9726245DA304}|InfinApp.Web\\InfinApp.Web.csproj|c:\\users\\inver\\source\\repos\\infinapp\\infinapp.web\\services\\controlactividadservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C334C01-4592-AA35-7FA4-9726245DA304}|InfinApp.Web\\InfinApp.Web.csproj|solutionrelative:infinapp.web\\services\\controlactividadservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C334C01-4592-AA35-7FA4-9726245DA304}|InfinApp.Web\\InfinApp.Web.csproj|c:\\users\\inver\\source\\repos\\infinapp\\infinapp.web\\controllers\\controlactividadapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C334C01-4592-AA35-7FA4-9726245DA304}|InfinApp.Web\\InfinApp.Web.csproj|solutionrelative:infinapp.web\\controllers\\controlactividadapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C334C01-4592-AA35-7FA4-9726245DA304}|InfinApp.Web\\InfinApp.Web.csproj|c:\\users\\inver\\source\\repos\\infinapp\\infinapp.web\\models\\actividadcolaborador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C334C01-4592-AA35-7FA4-9726245DA304}|InfinApp.Web\\InfinApp.Web.csproj|solutionrelative:infinapp.web\\models\\actividadcolaborador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C334C01-4592-AA35-7FA4-9726245DA304}|InfinApp.Web\\InfinApp.Web.csproj|c:\\users\\inver\\source\\repos\\infinapp\\infinapp.web\\repositories\\actividadcolaboradorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C334C01-4592-AA35-7FA4-9726245DA304}|InfinApp.Web\\InfinApp.Web.csproj|solutionrelative:infinapp.web\\repositories\\actividadcolaboradorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 381,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "controlActividad.js",
+              "DocumentMoniker": "C:\\Users\\inver\\source\\repos\\InfinApp\\InfinApp.Web\\wwwroot\\js\\controlActividad.js",
+              "RelativeDocumentMoniker": "InfinApp.Web\\wwwroot\\js\\controlActividad.js",
+              "ToolTip": "C:\\Users\\inver\\source\\repos\\InfinApp\\InfinApp.Web\\wwwroot\\js\\controlActividad.js",
+              "RelativeToolTip": "InfinApp.Web\\wwwroot\\js\\controlActividad.js",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABIAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-02-26T04:38:42.548Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ActividadColaborador.cs",
+              "DocumentMoniker": "C:\\Users\\inver\\source\\repos\\InfinApp\\InfinApp.Web\\Models\\ActividadColaborador.cs",
+              "RelativeDocumentMoniker": "InfinApp.Web\\Models\\ActividadColaborador.cs",
+              "ToolTip": "C:\\Users\\inver\\source\\repos\\InfinApp\\InfinApp.Web\\Models\\ActividadColaborador.cs",
+              "RelativeToolTip": "InfinApp.Web\\Models\\ActividadColaborador.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T04:36:28.733Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ControlActividadService.cs",
+              "DocumentMoniker": "C:\\Users\\inver\\source\\repos\\InfinApp\\InfinApp.Web\\Services\\ControlActividadService.cs",
+              "RelativeDocumentMoniker": "InfinApp.Web\\Services\\ControlActividadService.cs",
+              "ToolTip": "C:\\Users\\inver\\source\\repos\\InfinApp\\InfinApp.Web\\Services\\ControlActividadService.cs",
+              "RelativeToolTip": "InfinApp.Web\\Services\\ControlActividadService.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAgwC0AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T04:34:55.152Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ControlActividadApiController.cs",
+              "DocumentMoniker": "C:\\Users\\inver\\source\\repos\\InfinApp\\InfinApp.Web\\Controllers\\ControlActividadApiController.cs",
+              "RelativeDocumentMoniker": "InfinApp.Web\\Controllers\\ControlActividadApiController.cs",
+              "ToolTip": "C:\\Users\\inver\\source\\repos\\InfinApp\\InfinApp.Web\\Controllers\\ControlActividadApiController.cs",
+              "RelativeToolTip": "InfinApp.Web\\Controllers\\ControlActividadApiController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T04:34:36.153Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ControlActividadRepository.cs",
+              "DocumentMoniker": "C:\\Users\\inver\\source\\repos\\InfinApp\\InfinApp.Web\\Repositories\\ControlActividadRepository.cs",
+              "RelativeDocumentMoniker": "InfinApp.Web\\Repositories\\ControlActividadRepository.cs",
+              "ToolTip": "C:\\Users\\inver\\source\\repos\\InfinApp\\InfinApp.Web\\Repositories\\ControlActividadRepository.cs",
+              "RelativeToolTip": "InfinApp.Web\\Repositories\\ControlActividadRepository.cs",
+              "ViewState": "AgIAAIUAAAAAAAAAAAAUwJ8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T04:28:16.936Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ActividadColaboradorRepository.cs",
+              "DocumentMoniker": "C:\\Users\\inver\\source\\repos\\InfinApp\\InfinApp.Web\\Repositories\\ActividadColaboradorRepository.cs",
+              "RelativeDocumentMoniker": "InfinApp.Web\\Repositories\\ActividadColaboradorRepository.cs",
+              "ToolTip": "C:\\Users\\inver\\source\\repos\\InfinApp\\InfinApp.Web\\Repositories\\ActividadColaboradorRepository.cs",
+              "RelativeToolTip": "InfinApp.Web\\Repositories\\ActividadColaboradorRepository.cs",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAswGoAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T03:58:26.968Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedHeight": 19,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
