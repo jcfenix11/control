@@ -32,10 +32,10 @@ namespace InfinApp.Web.Repositories
             return lista;
         }
 
-        public async Task<ActividadColaborador?> ObtenerPorId(int id)
+        public async Task<ActividadColaborador?> ObtenerPorId(long id)
         {
             using var connection = _connectionFactory.CreateConnection();
-            using var command = new SqlCommand("sp_actividad_colaborador_obtener_por_id", connection);
+            using var command = new SqlCommand("gen.sp_actividad_colaborador_obtener_por_id", connection);
             command.CommandType = CommandType.StoredProcedure;
             command.Parameters.AddWithValue("@acl_id", id);
 
@@ -52,7 +52,7 @@ namespace InfinApp.Web.Repositories
         public async Task<int> Crear(ActividadColaborador model)
         {
             using var connection = _connectionFactory.CreateConnection();
-            using var command = new SqlCommand("sp_actividad_colaborador_crear", connection);
+            using var command = new SqlCommand("gen.sp_actividad_colaborador_crear", connection);
             command.CommandType = CommandType.StoredProcedure;
 
             command.Parameters.AddWithValue("@acl_actividad", model.Actividad);
@@ -70,7 +70,7 @@ namespace InfinApp.Web.Repositories
         public async Task<bool> Actualizar(ActividadColaborador model)
         {
             using var connection = _connectionFactory.CreateConnection();
-            using var command = new SqlCommand("sp_actividad_colaborador_actualizar", connection);
+            using var command = new SqlCommand("gen.sp_actividad_colaborador_actualizar", connection);
             command.CommandType = CommandType.StoredProcedure;
 
             command.Parameters.AddWithValue("@acl_id", model.Id);
@@ -78,6 +78,7 @@ namespace InfinApp.Web.Repositories
             command.Parameters.AddWithValue("@acl_descripcion", (object?)model.Descripcion ?? DBNull.Value);
             command.Parameters.AddWithValue("@acl_estatus", model.Estatus ?? true);
             command.Parameters.AddWithValue("@acl_rol", (object?)model.Rol ?? DBNull.Value);
+            command.Parameters.AddWithValue("@acl_categoria", model.Categoria);
 
             await connection.OpenAsync();
 
@@ -85,10 +86,10 @@ namespace InfinApp.Web.Repositories
             return rows > 0;
         }
 
-        public async Task<bool> Eliminar(int id)
+        public async Task<bool> Eliminar(long id)
         {
             using var connection = _connectionFactory.CreateConnection();
-            using var command = new SqlCommand("sp_actividad_colaborador_eliminar", connection);
+            using var command = new SqlCommand("gen.sp_actividad_colaborador_eliminar", connection);
             command.CommandType = CommandType.StoredProcedure;
 
             command.Parameters.AddWithValue("@acl_id", id);
@@ -113,8 +114,10 @@ namespace InfinApp.Web.Repositories
                     : reader.GetBoolean(reader.GetOrdinal("acl_estatus")),
                 Rol = reader.IsDBNull(reader.GetOrdinal("acl_rol"))
                     ? null
-                    : reader.GetInt32(reader.GetOrdinal("acl_rol")),
-                FechaCracion = reader.GetDateTime(reader.GetOrdinal("acl_fecha_creada"))
+                    : reader.GetInt32(reader.GetOrdinal("acl_rol")),                
+                Categoria = reader.IsDBNull(reader.GetOrdinal("acl_categoria"))
+                    ? null
+                    : reader.GetInt32(reader.GetOrdinal("acl_categoria")),
             };
         }
     }

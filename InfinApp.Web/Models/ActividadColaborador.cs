@@ -13,5 +13,7 @@
         public int? Rol { get; set; }
 
         public DateTime FechaCracion { get; set; }
+
+        public int? Categoria { get; set; }
     }
 }

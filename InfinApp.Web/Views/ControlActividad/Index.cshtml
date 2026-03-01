@@ -1,42 +1,41 @@
-﻿@model List<InfinApp.Web.Models.ControlActividad>
-@{
-    ViewData["Title"] = "Control de Actividades";
-    var actividadesColaborador = ViewBag.ActividadesColaborador as List<InfinApp.Web.Models.ActividadColaborador>;
-}
+﻿    @model List<InfinApp.Web.Models.ControlActividad>
+    @{
+        ViewData["Title"] = "Control de Actividades";
+    var actividadesColaborador = ViewBag.ActividadColaborador as List<InfinApp.Web.Models.ActividadColaborador>;
+    }
 
-<h1>Control de Actividades</h1>
+    <h1>Control de Actividades</h1>
 
-<div class="mb-3">
-    <label for="selectColaborador" class="form-label">Seleccione un Colaborador:</label>
-    <select id="selectColaborador" class="form-select">
-        <option value="">-- Seleccione --</option>
-        @if (actividadesColaborador != null)
-        {
-            foreach (var acl in actividadesColaborador)
+    <div class="mb-3">
+        <label for="selectColaborador" class="form-label">Seleccione un Colaborador:</label>
+        <select id="selectColaborador" class="form-select">
+            <option value="">-- Seleccione --</option>
+            @if (actividadesColaborador != null)
             {
-                <option value="@acl.Id">@acl.Actividad</option>
+                foreach (var acl in actividadesColaborador)
+                {
+                    <option value="@acl.Id">@acl.Actividad</option>
+                }
             }
-        }
-    </select>
-</div>
+        </select>
+    </div>
 
-<table class="table table-striped" id="tablaActividades">
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Actividad</th>
-            <th>Descripción</th>
-            <th>Fecha Inicio</th>
-            <th>Fecha Fin</th>
-            <th>Corresponde</th>
-        </tr>
-    </thead>
-    <tbody>
-        <!-- Se llenará vía JS -->
-    </tbody>
-</table>
+    <table class="table table-striped" id=" ">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Actividad</th>
+                <th>Descripción</th>
+                <th>Fecha Inicio</th>
+                <th>Fecha Fin</th>
+                <th>Corresponde</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Se llenará vía JS -->
+        </tbody>
+    </table>
 
-@section Scripts {
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/js/controlActividad.js"></script>
-}
+    @section Scripts {
+        <script src="~/js/controlActividad.js"></script>
+    }

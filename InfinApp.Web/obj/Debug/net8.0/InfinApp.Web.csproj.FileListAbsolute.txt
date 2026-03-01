@@ -78,3 +78,4 @@ C:\Users\inver\source\repos\InfinApp\InfinApp.Web\obj\Debug\net8.0\refint\InfinA
 C:\Users\inver\source\repos\InfinApp\InfinApp.Web\obj\Debug\net8.0\InfinApp.Web.pdb
 C:\Users\inver\source\repos\InfinApp\InfinApp.Web\obj\Debug\net8.0\InfinApp.Web.genruntimeconfig.cache
 C:\Users\inver\source\repos\InfinApp\InfinApp.Web\obj\Debug\net8.0\ref\InfinApp.Web.dll
+C:\Users\inver\source\repos\InfinApp\InfinApp.Web\obj\Debug\net8.0\InfinApp.Web.sourcelink.json

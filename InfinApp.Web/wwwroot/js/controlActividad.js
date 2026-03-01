@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
 
     $('#selectColaborador').change(function () {
-        var colaboradorId = $(this).val();
+        var colaboradorId = $(this).val() ;
         var tbody = $('#tablaActividades tbody');
         tbody.empty();
 

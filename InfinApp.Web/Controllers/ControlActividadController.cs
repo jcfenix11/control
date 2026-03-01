@@ -22,7 +22,8 @@ namespace InfinApp.Web.Controllers
         public async Task<IActionResult> Index()
         {
             var lista = await _service.ObtenerTodos();
-            ViewBag.ActividadesColaborador = await _actividadService.ObtenerTodos(); // Para select en Razor
+            ViewBag.ActividadColaborador = await _actividadService.ObtenerTodos(); // Para select en Razor
+            Console.WriteLine("numero de objetos: " + lista.Count);
             return View(lista);
         }
 

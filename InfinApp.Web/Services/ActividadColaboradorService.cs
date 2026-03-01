@@ -22,7 +22,7 @@ namespace InfinApp.Web.Services
             return _repository.Actualizar(model);
         }
 
-        public Task<bool> Eliminar(int id)
+        public Task<bool> Eliminar(long id)
         {
             return _repository.Eliminar(id);
         }
@@ -32,7 +32,7 @@ namespace InfinApp.Web.Services
             return _repository.ObtenerTodos();
         }
 
-        public Task<ActividadColaborador?> ObtenerPorId(int id)
+        public Task<ActividadColaborador?> ObtenerPorId(long id)
         {
             return _repository.ObtenerPorId(id);
         }
