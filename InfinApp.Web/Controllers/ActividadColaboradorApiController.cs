@@ -36,20 +36,32 @@ namespace InfinApp.Web.Controllers
             return Ok(item);
         }
 
+        // POST: api/ActividadColaboradorApi
+        [HttpPost("crear")]
+        public async Task<IActionResult> Crear([FromBody] ActividadColaborador model)
+        {
+            var result = await _service.Crear(model);
+
+            if (result == null)
+                return BadRequest("No se pudo crear la actividad");
+
+            return Ok(result);
+        }
+
         // PUT: api/ActividadColaboradorApi
         [HttpPut("actualizar")]
         public async Task<IActionResult> Actualizar([FromBody] ActividadColaborador model)
         {
-            var resultado = await _service.Actualizar(model);
+            var result = await _service.Actualizar(model);
 
-            if (!resultado)
-                return BadRequest();
+            if (result != null)
+                return Ok(result);
 
-            return Ok();
+            return NotFound("No se pudo actualizar");
         }
 
         // DELETE: api/ActividadColaboradorApi
-        [HttpDelete("eliminar/{id}")]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> Eliminar(long id)
         {
             var resultado = await _service.Eliminar(id);

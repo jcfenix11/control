@@ -1,6 +1,8 @@
 ﻿$(document).ready(function () {
     cargarTabla();
     actualizarActividadColaboradorEvent();
+    abrirModalCrear();
+    crearActividadEvent();
 });
 
 function cargarTabla() {
@@ -22,15 +24,14 @@ function cargarTabla() {
                 <td>${item.descripcion || ''}</td>
                 <td>${item.estatus ? 'Activo' : 'Inactivo'}</td>
                 <td>${item.rol ?? ''}</td>
-                <td>${item.fechaCracion ?? ''}</td>
+                <td>${formatearFecha(item.fechaCracion) ?? ''}</td>
                 <td>
                         <button class="btn btn-sm btn-warning"
                             onclick="editar(${item.id})">
                             Editar
                         </button>
 
-                        <button class="btn btn-sm btn-danger"
-                            onclick="eliminar(${item.id})">
+                        <button class="btn btn-sm btn-danger btnEliminar" onclick="eliminar(${item.id})">
                             Eliminar
                         </button>
                     </td>
@@ -49,22 +50,122 @@ function cargarTabla() {
     )
 }
 
-function formatearFecha(fecha) {
-    if (!fecha) return '';
-    let f = new Date(fecha);
-    return f.toLocaleDateString();
+function abrirModalCrear() {
+
+    $("#btnNuevaActividad").click(function () {
+
+        $("#formCrearActividad")[0].reset();
+
+        let modal = new bootstrap.Modal(
+            document.getElementById("modalCrearActividad")
+        );
+
+        modal.show();
+
+    });
+
+}
+
+function crearActividadEvent() {
+
+    $("#btnGuardarNuevaActividad").click(function () {
+
+        let modelo = {
+
+            actividad: $("#crearActividad").val(),
+            descripcion: $("#crearDescripcion").val(),
+            rol: parseInt($("#crearRol").val()),
+            categoria: parseInt($("#crearCategoria").val()),
+            estatus: $("#crearEstatus").val() === "true",
+            fechaCracion: new Date()
+
+        };
+
+        $.ajax({
+
+            url: '/api/ActividadColaboradorApi/crear',
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify(modelo),
+
+            success: function () {
+
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Actividad creada correctamente',
+                    timer: 1500,
+                    showConfirmButton: false
+                });
+
+                let modal = bootstrap.Modal.getInstance(
+                    document.getElementById("modalCrearActividad")
+                );
+
+                modal.hide();
+
+                cargarTabla();
+
+            },
+
+            error: function (xhr) {
+                conosole.log('error al crear actividad: ', xhr.responseText);
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'No se pudo crear la actividad'
+                });
+            }
+        });
+    });
 }
 
 function eliminar(id) {
-    if (!confirm("¿Seguro que deseas eliminar?")) return;
 
-    $.ajax({
-        url: `/ActividadColaborador/EliminarJson/${id}`,
-        type: 'DELETE',
-        success: function () {
-            cargarTabla();
-        }
-    });
+        Swal.fire({
+            title: "¿Estás seguro?",
+            text: "Esta actividad será eliminada.",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#d33",
+            cancelButtonColor: "#6c757d",
+            confirmButtonText: "Sí, eliminar",
+            cancelButtonText: "Cancelar"
+        }).then((result) => {
+
+            if (result.isConfirmed) {
+
+                $.ajax({
+                    url: `/api/ActividadColaboradorApi/${id}`,
+                    type: "DELETE",
+
+                    success: function () {
+
+                        Swal.fire({
+                            icon: "success",
+                            title: "Eliminado",
+                            text: "La actividad fue eliminada correctamente",
+                            timer: 1500,
+                            showConfirmButton: false
+                        });
+
+                        cargarTabla();
+                    },
+
+                    error: function () {
+
+                        Swal.fire({
+                            icon: "error",
+                            title: "Error",
+                            text: "No se pudo eliminar la actividad"
+                        });
+
+                    }
+                });
+
+            }
+
+        });
+
 }
 function editar(id) {
 
@@ -91,13 +192,13 @@ function editar(id) {
 }
 
 function actualizarActividadColaboradorEvent() {
-    $("#btnGuardarEdicion").click(function () {
+    $("#btnGuardarEdicion").off("click").on("click", function () {
 
         let modelo = {
-            id: $("#editId").val(),
+            id: parseInt($("#editId").val()),
             actividad: $("#editActividad").val(),
             descripcion: $("#editDescripcion").val(),
-            rol: $("#editRol").val(),
+            rol: parseInt($("#editRol").val()),
             estatus: $("#editEstatus").val() === "true",
             categoria: parseInt($("#editCategoria").val())
             
@@ -115,9 +216,22 @@ function actualizarActividadColaboradorEvent() {
                 modal.hide();
 
                 cargarTabla();
+
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Se actualizó correctamente'
+                });
+
+                console.log(xhr.responseText);
             },
-            error: function () {
-                alert("Error al actualizar.");
+            error: function (xhr) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error al actualizar',
+                    text: 'No se pudo actualizar la actividad'
+                });
+
+                console.log(xhr.responseText);
             }
         });
 

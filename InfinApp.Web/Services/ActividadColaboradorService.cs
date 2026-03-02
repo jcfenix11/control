@@ -12,12 +12,12 @@ namespace InfinApp.Web.Services
             _repository = repository;
         }
 
-        public Task<int> Crear(ActividadColaborador model)
+        public Task<ActividadColaborador?> Crear(ActividadColaborador model)
         {
             return _repository.Crear(model);
         }
 
-        public Task<bool> Actualizar(ActividadColaborador model)
+        public Task<ActividadColaborador?> Actualizar(ActividadColaborador model)
         {
             return _repository.Actualizar(model);
         }

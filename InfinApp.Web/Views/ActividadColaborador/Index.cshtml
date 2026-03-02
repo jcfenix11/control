@@ -5,7 +5,7 @@
 <h1>Actividades por Colaborador</h1>
 
 <div class="mb-3">
-    <button class="btn btn-primary" id="btnNuevo">
+    <button class="btn btn-primary" id="btnNuevaActividad">
         Nueva Actividad
     </button>
 </div>
@@ -27,6 +27,7 @@
     </tbody>
 </table>
 
+@await Html.PartialAsync("_ModalCrear")
 @await Html.PartialAsync("_ModalEditar")
 
 @section Scripts {

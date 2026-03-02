@@ -49,7 +49,7 @@ namespace InfinApp.Web.Repositories
             return null;
         }
 
-        public async Task<int> Crear(ActividadColaborador model)
+        public async Task<ActividadColaborador?> Crear(ActividadColaborador model)
         {
             using var connection = _connectionFactory.CreateConnection();
             using var command = new SqlCommand("gen.sp_actividad_colaborador_crear", connection);
@@ -59,45 +59,62 @@ namespace InfinApp.Web.Repositories
             command.Parameters.AddWithValue("@acl_descripcion", (object?)model.Descripcion ?? DBNull.Value);
             command.Parameters.AddWithValue("@acl_estatus", model.Estatus ?? true);
             command.Parameters.AddWithValue("@acl_rol", (object?)model.Rol ?? DBNull.Value);
-            command.Parameters.AddWithValue("@acl_fecha_creacion", model.FechaCracion);
+            command.Parameters.AddWithValue("@acl_fecha_creada", model.FechaCracion);
+            command.Parameters.AddWithValue("@acl_categoria", (object?)model.Categoria ?? DBNull.Value);
 
             await connection.OpenAsync();
 
-            var result = await command.ExecuteScalarAsync();
-            return Convert.ToInt32(result);
+            using var reader = await command.ExecuteReaderAsync();
+
+            if (await reader.ReadAsync())
+            {
+                return Mapear(reader);
+            }
+
+            return null;
         }
 
-        public async Task<bool> Actualizar(ActividadColaborador model)
+        public async Task<ActividadColaborador?> Actualizar(ActividadColaborador model)
         {
             using var connection = _connectionFactory.CreateConnection();
             using var command = new SqlCommand("gen.sp_actividad_colaborador_actualizar", connection);
             command.CommandType = CommandType.StoredProcedure;
 
             command.Parameters.AddWithValue("@acl_id", model.Id);
-            command.Parameters.AddWithValue("@acl_actividad", model.Actividad);
-            command.Parameters.AddWithValue("@acl_descripcion", (object?)model.Descripcion ?? DBNull.Value);
-            command.Parameters.AddWithValue("@acl_estatus", model.Estatus ?? true);
-            command.Parameters.AddWithValue("@acl_rol", (object?)model.Rol ?? DBNull.Value);
-            command.Parameters.AddWithValue("@acl_categoria", model.Categoria);
+            command.Parameters.AddWithValue("@acl_actividad", model.Actividad ?? (object)DBNull.Value);
+            command.Parameters.AddWithValue("@acl_descripcion", model.Descripcion ?? (object)DBNull.Value);
+            command.Parameters.AddWithValue("@acl_estatus", model.Estatus ?? (object)DBNull.Value);
+            command.Parameters.AddWithValue("@acl_rol", model.Rol ?? (object)DBNull.Value);
+            command.Parameters.AddWithValue("@acl_categoria", model.Categoria ?? (object)DBNull.Value);
 
             await connection.OpenAsync();
 
-            var rows = await command.ExecuteNonQueryAsync();
-            return rows > 0;
+            using var reader = await command.ExecuteReaderAsync();
+
+            if (await reader.ReadAsync())
+            {
+                return Mapear(reader);
+            }
+
+            return null;
         }
 
         public async Task<bool> Eliminar(long id)
         {
             using var connection = _connectionFactory.CreateConnection();
             using var command = new SqlCommand("gen.sp_actividad_colaborador_eliminar", connection);
-            command.CommandType = CommandType.StoredProcedure;
 
-            command.Parameters.AddWithValue("@acl_id", id);
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.Add("@acl_id", SqlDbType.BigInt).Value = id;
 
             await connection.OpenAsync();
 
-            var rows = await command.ExecuteNonQueryAsync();
-            return rows > 0;
+            var result = await command.ExecuteScalarAsync();
+
+            if (result == null)
+                return false;
+
+            return Convert.ToInt32(result) > 0;
         }
 
         private ActividadColaborador Mapear(SqlDataReader reader)

@@ -1,0 +1,62 @@
+﻿<div class="modal fade" id="modalCrearActividad" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">Nueva Actividad</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+
+                <form id="formCrearActividad">
+
+                    <div class="mb-3">
+                        <label>Actividad</label>
+                        <input type="text" id="crearActividad" class="form-control" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Descripción</label>
+                        <textarea id="crearDescripcion" class="form-control"></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Rol</label>
+                        <select id="crearRol" class="form-control">
+                            <option value="1">1</option>
+                            <option value="2">1</option>
+                            <option value="3">1</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Categoría</label>
+                        <select id="crearCategoria" class="form-control">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Estatus</label>
+                        <select id="crearEstatus" class="form-control">
+                            <option value="true">Activo</option>
+                            <option value="false">Inactivo</option>
+                        </select>
+                    </div>
+
+                </form>
+
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button class="btn btn-success" id="btnGuardarControlActividad">Guardar</button>
+            </div>
+
+        </div>
+    </div>
+</div>

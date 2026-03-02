@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("InfinApp.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2614bb2356034a42afe5f501c141532919d10ce5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f0ca0665b9323f556affe26a726d753507aab8a2")]
 [assembly: System.Reflection.AssemblyProductAttribute("InfinApp.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("InfinApp.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

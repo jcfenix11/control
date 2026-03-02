@@ -26,6 +26,10 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWN0aXZpZGFkQ29sYWJvcmFkb3JcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/inver/source/repos/InfinApp/InfinApp.Web/Views/ActividadColaborador/_ModalCrear.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWN0aXZpZGFkQ29sYWJvcmFkb3JcX01vZGFsQ3JlYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/inver/source/repos/InfinApp/InfinApp.Web/Views/ActividadColaborador/_ModalEditar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWN0aXZpZGFkQ29sYWJvcmFkb3JcX01vZGFsRWRpdGFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -36,6 +40,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/inver/source/repos/InfinApp/InfinApp.Web/Views/ControlActividad/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udHJvbEFjdGl2aWRhZFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/inver/source/repos/InfinApp/InfinApp.Web/Views/ControlActividad/_ModalCrearControl.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udHJvbEFjdGl2aWRhZFxfTW9kYWxDcmVhckNvbnRyb2wuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/inver/source/repos/InfinApp/InfinApp.Web/Views/Home/Privacy.cshtml]

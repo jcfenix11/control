@@ -1,0 +1,60 @@
+﻿<div class="modal fade" id="modalCrearControlActividad" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">Nuevo Control de Actividad</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+
+                <div class="mb-3">
+                    <label>Actividad</label>
+                    <select id="createActividad" class="form-control">
+                        <option value="">Seleccione</option>
+                        @foreach (var item in ViewBag.ActividadColaborador)
+                        {
+                            <option value="@item.Id">@item.Actividad</option>
+                        }
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label>Fecha Inicio</label>
+                    <div class="input-group" id="fechaInicioPicker">
+                        <input type="text" id="createFechaInicio" class="form-control" />
+                        <span class="input-group-text">
+                            <i class="bi bi-calendar"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label>Fecha Fin</label>
+                    <div class="input-group" id="fechaFinPicker">
+                        <input type="text" id="createFechaFin" class="form-control" />
+                        <span class="input-group-text">
+                            <i class="bi bi-calendar"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label>Corresponde</label>
+                    <select id="createCorresponde" class="form-control">
+                        <option value="1">Mecánico</option>
+                        <option value="2">Soporte</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button class="btn btn-primary" id="btnGuardarActividad">Guardar</button>
+            </div>
+
+        </div>
+    </div>
+</div>

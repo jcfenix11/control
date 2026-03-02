@@ -6,8 +6,8 @@ namespace InfinApp.Web.Services
     {
         Task<List<ActividadColaborador>> ObtenerTodos();
         Task<ActividadColaborador?> ObtenerPorId(long id);
-        Task<int> Crear(ActividadColaborador model);
-        Task<bool> Actualizar(ActividadColaborador model);
+        Task<ActividadColaborador?> Crear(ActividadColaborador model);
+        Task<ActividadColaborador?> Actualizar(ActividadColaborador model);
         Task<bool> Eliminar(long id);
     }
 }
